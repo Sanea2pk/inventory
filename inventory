@@ -1,8 +1,8 @@
 [webservers]
-web1 ansible_host=10.1.10.184
+web1 #ansible_host=
 
 [appservers]
-app1 ansible_host=10.1.10.183
+app1 #ansible_host=
 
 [servers:children]
 webservers
@@ -12,4 +12,4 @@ appservers
 ansible_user=angular
 
 [bastion_server]
-bastion ansible_host=10.1.10.182 ansible_user=angular
+bastion ansible_user=angular #ansible_host= 
