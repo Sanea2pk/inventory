@@ -1,0 +1,15 @@
+[webservers]
+web1 ansible_host=10.1.10.184
+
+[appservers]
+app1 ansible_host=10.1.10.183
+
+[servers:children]
+webservers
+appservers
+
+[servers:vars]
+ansible_user=angular
+
+[bastion_server]
+bastion ansible_host=10.1.10.182 ansible_user=angular
