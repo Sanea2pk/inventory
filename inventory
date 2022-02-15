@@ -3,6 +3,7 @@ web1 ansible_host=10.1.10.184
 
 [appservers]
 app1 ansible_host=10.1.10.183
+app2 ansible_host=10.1.10.163
 
 [servers:children]
 webservers
