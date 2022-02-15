@@ -1,15 +1,16 @@
 [webservers]
-web1 #ansible_host=
+web1 ansible_host=10.1.10.184
 
 [appservers]
-app1 #ansible_host=
+app1 ansible_host=10.1.10.183
 
 [servers:children]
 webservers
 appservers
 
 [servers:vars]
-ansible_user=angular
+ansible_user=angular 
+#ansible_ssh_private_key_file=/tmp/ssh_keys/new_ssh_key
 
 [bastion_server]
-bastion ansible_user=angular #ansible_host= 
+bastion ansible_user=angular ansible_host=10.1.10.182
